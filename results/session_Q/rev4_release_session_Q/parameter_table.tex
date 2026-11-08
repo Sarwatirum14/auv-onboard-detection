@@ -1,0 +1,91 @@
+\begin{table*}[t]
+\centering
+\caption{System parameters, settings and sources}
+\label{tab:params}
+\footnotesize
+\begin{tabular}{p{3.3cm}p{2.6cm}p{1.6cm}p{6.6cm}p{2.0cm}}
+\hline
+Parameter & Value & Unit & Source / setting support & Kind \\
+\hline
+\multicolumn{5}{l}{\textit{Detector and descriptor}} \\
+Q\_POS & 1024 & levels & Section II-E; ablation in Cell 17 & design choice \\
+Q\_CONF & 255 & levels & Section II-D & design choice \\
+CONF\_THR & 0.1 & - & Highest mAP in the threshold ablation (Table V) & design choice \\
+NMS\_IOU\_THR & 0.45 & - & Section II-C & design choice \\
+IMGSZ & 640 & px & YOLOv8 training and inference resolution & design choice \\
+HEADER\_BITS & 16 & bit & Detection count per image, Algorithm 1 & design choice \\
+JPEG\_Q\_MAIN & 50 & - & Mid-range JPEG quality; ablation at 25 and 75 & design choice \\
+\multicolumn{5}{l}{\textit{Acoustic modem}} \\
+MODEM\_NAME & EvoLogics S2C R 18/34 & - & EvoLogics S2C R 18/34 product datasheet (evologics.de/product/s2c-r-18-34-1) & datasheet \\
+MODEM\_F\_LOW\_KHZ & 18.0 & kHz & EvoLogics S2C R 18/34 product datasheet (evologics.de/product/s2c-r-18-34-1) & datasheet \\
+MODEM\_F\_HIGH\_KHZ & 34.0 & kHz & EvoLogics S2C R 18/34 product datasheet (evologics.de/product/s2c-r-18-34-1) & datasheet \\
+MODEM\_MAX\_RATE\_BPS & 13900 & bit/s & EvoLogics S2C R 18/34 product datasheet (evologics.de/product/s2c-r-18-34-1): up to 13.9 kbit/s & datasheet \\
+MODEM\_MAX\_RANGE\_M & 3500 & m & EvoLogics S2C R 18/34 product datasheet (evologics.de/product/s2c-r-18-34-1) & datasheet \\
+MODEM\_TX\_POWER\_TABLE & \{"1000": 2.8, "2000": 8.0, "3500": 35.0\} & W at range (m) & EvoLogics S2C R 18/34 product datasheet (evologics.de/product/s2c-r-18-34-1): transmit power per range setting & datasheet \\
+MODEM\_TX\_POWER\_MAX\_W & 65.0 & W & EvoLogics S2C R 18/34 product datasheet (evologics.de/product/s2c-r-18-34-1) & datasheet \\
+MODEM\_RX\_POWER\_W & 0.8 & W & EvoLogics S2C R 18/34 product datasheet (evologics.de/product/s2c-r-18-34-1) & datasheet \\
+MODEM\_LISTEN\_POWER\_W & 0.285 & W & EvoLogics S2C R 18/34 product datasheet (evologics.de/product/s2c-r-18-34-1): upper end of 5 to 285 mW & datasheet \\
+MODEM\_DEPTH\_RATING\_M & 2000 & m & EvoLogics S2C R 18/34 product datasheet (evologics.de/product/s2c-r-18-34-1): metal housings & datasheet \\
+LINK\_RATE\_BPS & 10000 & bit/s & 72 \% of the 13.9 kbit/s datasheet maximum, margin for coding and multipath & design choice \\
+OPERATING\_RANGE\_M & 1000 & m & Datasheet range of the lowest power setting & design choice \\
+TX\_POWER\_W & 2.8 & W & EvoLogics S2C R 18/34 product datasheet (evologics.de/product/s2c-r-18-34-1): power for the operating range & datasheet \\
+FRAME\_PAYLOAD\_BITS & 512 & bit & 64-byte frame payload, implemented in Cell 25 & design choice \\
+FRAME\_OVERHEAD\_BITS & 64 & bit & 32-bit frame header + CRC-32, implemented in Cell 25 & design choice \\
+FRAME\_PREAMBLE\_S & 0.025 & s & Not in the datasheet; sensitivity 0 to 0.1 s in Cell 19 & assumption \\
+MODULATION & bpsk & - & Modem waveform is proprietary; uncoded BPSK is a conservative reference & assumption \\
+FADING & awgn & - & Fades are modelled separately by the Gilbert-Elliott burst model & assumption \\
+CODING\_GAIN\_DB & 0.0 & dB & No coding gain credited (conservative) & assumption \\
+JSCC\_BITS\_PER\_SYMBOL & 4 & bit/symbol & 16-QAM equivalence used only to count JSCC frames & design choice \\
+\multicolumn{5}{l}{\textit{Propagation and coverage}} \\
+SPREADING\_K & 1.5 & - & M. Stojanovic, On the relationship between capacity and distance in an underwater acoustic channel, 2007 (practical spreading) & literature \\
+SHIPPING\_S & 0.5 & - & M. Stojanovic, On the relationship between capacity and distance in an underwater acoustic channel, 2007 (moderate shipping) & literature \\
+WIND\_MPS & 5.0 & m/s & Moderate sea state; sensitivity 0 to 15 m/s in Cell 24 & assumption \\
+SOUND\_SPEED\_MPS & 1500.0 & m/s & R. J. Urick, Principles of Underwater Sound, 3rd ed. & literature \\
+TX\_EFFICIENCY & 0.25 & - & Cancels out after calibration to the datasheet power-range pairs & assumption \\
+DI\_DB & 0.0 & dB & EvoLogics S2C R 18/34 product datasheet (evologics.de/product/s2c-r-18-34-1): horizontally omnidirectional transducer & datasheet \\
+FER\_REQ & 0.01 & - & Frame error rate that defines the edge of the datasheet range & design choice \\
+MAP\_TARGET & 0.6 & mAP@0.5 & Minimum useful detection quality for coverage & design choice \\
+FPS\_TARGETS & [0.05, 1, 5] & fps & Monitoring rates for coverage; 0.05 fps lets the image-based baselines appear at all & design choice \\
+TDMA\_GUARD\_COMP\_S & 0.05 & s & TDMA guard when AUVs pre-compensate their known propagation delay (modem ranging) & assumption \\
+COVER\_MAX\_RANGE\_M & 6000 & m & Coverage grid extent & design choice \\
+COVER\_MAX\_DEPTH\_M & 1000 & m & Coverage grid depth, within the 2000 m rating & design choice \\
+\multicolumn{5}{l}{\textit{Edge platform}} \\
+PI5\_LATENCY\_MS & 94.28 & ms/image & Ultralytics documentation, Raspberry Pi guide: YOLOv8n on Raspberry Pi 5, NCNN, FP32, 640 px & official benchmark \\
+PI5\_POWER\_W & 8.8 & W & Typical full-load draw; replace with your own reading. Results checked up to PI5\_POWER\_MAX\_W & assumption \\
+PI5\_POWER\_MAX\_W & 25.5 & W & Raspberry Pi 5 product brief and official 27 W USB-C power supply (5.1 V, 5 A): hard upper bound of the official supply & datasheet \\
+PI5\_PRICE\_USD & 80.0 & USD & Raspberry Pi official list price, 8 GB (check on submission date) & datasheet \\
+JETSON\_POWER\_MODES\_W & [10.0, 25.0] & W & NVIDIA Jetson Orin NX series data sheet (power modes) (Orin NX 16 GB) & datasheet \\
+JETSON\_LATENCY\_MS & None & ms/image & Fill from the Ultralytics Jetson benchmark for YOLOv8n; row skipped while None & official benchmark \\
+JETSON\_PRICE\_USD & 999.0 & USD & NVIDIA list price, Orin NX 16 GB (check on submission date) & datasheet \\
+CAMERA\_NAME & Raspberry Pi Camera Module 3 & - & Raspberry Pi official product page & datasheet \\
+CAMERA\_PRICE\_USD & 25.0 & USD & Raspberry Pi official list price (check on submission date) & datasheet \\
+T4\_LATENCY\_MS & 9.0 & ms/image & Median over the validation set after 20 warm-up images (Cell 9) & measured \\
+\multicolumn{5}{l}{\textit{Mission and cost scenario}} \\
+MISSION\_HOURS & 4.0 & h & Typical survey mission length & design choice \\
+MISSIONS\_PER\_YEAR & 150 & - & Operating scenario & design choice \\
+YEARS & 3 & years & Total cost of ownership horizon & design choice \\
+PRIMARY\_BATTERY\_USD\_PER\_WH & 1.0 & USD/Wh & Single-use lithium pack cost; ratios between schemes do not depend on it & assumption \\
+GRID\_USD\_PER\_KWH & 0.2 & USD/kWh & Rechargeable pack charged from shore power & assumption \\
+\multicolumn{5}{l}{\textit{Evaluation protocol}} \\
+LOSS\_SEEDS & [42, 43, 44, 45, 46] & - & Seed 42 reproduces the previous submission & design choice \\
+JSCC\_SEEDS & [42, 43, 44] & - & Fewer seeds for the image-based learned baselines & design choice \\
+TRAIN\_SEEDS & [43, 44] & - & Independent detector trainings besides seed 42 & design choice \\
+SNR\_LIST\_LEGACY & [10, 20, 30] & dB & Grid of the previous submission & design choice \\
+RHO\_LIST & [0.0, 0.05, 0.1] & - & Grid of the previous submission & design choice \\
+SNR\_LIST\_BER & [0, 2, 4, 6, 8, 10, 12, 14] & dB Es/N0 & Covers the full frame error transition & design choice \\
+GE\_MEAN\_LOSS & 0.1 & - & Same mean loss as the iid worst case & design choice \\
+GE\_BURST\_LENGTHS & [2, 4, 8] & frames & Mean burst lengths of the Gilbert-Elliott model & design choice \\
+JSCC\_C & 16 & channels & 32 x 32 x 16 latent, as in the previous submission & design choice \\
+JSCC\_IMG\_HW & 256 & px & As in the previous submission & design choice \\
+JSCC640\_C & 3 & channels & 80 x 80 x 3 latent, close to the 256 px channel uses & design choice \\
+DEEPJSCC\_C & 16 & channels & Same channel uses as the JSCC autoencoder & design choice \\
+YOLO\_EPOCHS & 50 & epochs & Section IV-B & design choice \\
+JSCC\_EPOCHS & 50 & epochs & As in the previous submission & design choice \\
+DEEPJSCC\_EPOCHS & 50 & epochs & Same training length as the JSCC autoencoder & design choice \\
+JSCC640\_EPOCHS & 20 & epochs & GPU budget & design choice \\
+RUOD\_EPOCHS & 30 & epochs & GPU budget, generalisation check only & design choice \\
+QUANT\_LEVELS & [256, 512, 1024, 2048] & levels & Quantization ablation in Cell 17 & design choice \\
+SIL\_SNRS\_DB & [8, 12] & dB Es/N0 & Inside and above the frame error transition of Cell 14 & design choice \\
+\hline
+\end{tabular}
+\end{table*}

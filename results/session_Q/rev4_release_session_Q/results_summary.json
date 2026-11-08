@@ -1,0 +1,10 @@
+{
+  "t4_latency_ms_median": 8.995153000000755,
+  "t4_latency_ms_mean": 9.131870802208907,
+  "t4_latency_ms_std": 0.562196196191025,
+  "t4_latency_ms_p95": 9.978330499939148,
+  "mean_detections_per_image": 13.06019656019656,
+  "text_bits_per_detection": 360.0,
+  "quant_spread_map50_legacy": 0.007287955284118741,
+  "quant_spread_map50": 0.008750605583190962
+}

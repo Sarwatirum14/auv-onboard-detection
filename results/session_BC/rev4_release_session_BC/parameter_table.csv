@@ -1,0 +1,74 @@
+key,value,unit,group,source,kind
+Q_POS,1024,levels,Detector and descriptor,Section II-E; ablation in Cell 17,design choice
+Q_CONF,255,levels,Detector and descriptor,Section II-D,design choice
+CONF_THR,0.1,-,Detector and descriptor,Highest mAP in the threshold ablation (Table V),design choice
+NMS_IOU_THR,0.45,-,Detector and descriptor,Section II-C,design choice
+IMGSZ,640,px,Detector and descriptor,YOLOv8 training and inference resolution,design choice
+HEADER_BITS,16,bit,Detector and descriptor,"Detection count per image, Algorithm 1",design choice
+JPEG_Q_MAIN,50,-,Detector and descriptor,Mid-range JPEG quality; ablation at 25 and 75,design choice
+MODEM_NAME,EvoLogics S2C R 18/34,-,Acoustic modem,EvoLogics S2C R 18/34 product datasheet (evologics.de/product/s2c-r-18-34-1),datasheet
+MODEM_F_LOW_KHZ,18.0,kHz,Acoustic modem,EvoLogics S2C R 18/34 product datasheet (evologics.de/product/s2c-r-18-34-1),datasheet
+MODEM_F_HIGH_KHZ,34.0,kHz,Acoustic modem,EvoLogics S2C R 18/34 product datasheet (evologics.de/product/s2c-r-18-34-1),datasheet
+MODEM_MAX_RATE_BPS,13900,bit/s,Acoustic modem,EvoLogics S2C R 18/34 product datasheet (evologics.de/product/s2c-r-18-34-1): up to 13.9 kbit/s,datasheet
+MODEM_MAX_RANGE_M,3500,m,Acoustic modem,EvoLogics S2C R 18/34 product datasheet (evologics.de/product/s2c-r-18-34-1),datasheet
+MODEM_TX_POWER_TABLE,"{""1000"": 2.8, ""2000"": 8.0, ""3500"": 35.0}",W at range (m),Acoustic modem,EvoLogics S2C R 18/34 product datasheet (evologics.de/product/s2c-r-18-34-1): transmit power per range setting,datasheet
+MODEM_TX_POWER_MAX_W,65.0,W,Acoustic modem,EvoLogics S2C R 18/34 product datasheet (evologics.de/product/s2c-r-18-34-1),datasheet
+MODEM_RX_POWER_W,0.8,W,Acoustic modem,EvoLogics S2C R 18/34 product datasheet (evologics.de/product/s2c-r-18-34-1),datasheet
+MODEM_LISTEN_POWER_W,0.285,W,Acoustic modem,EvoLogics S2C R 18/34 product datasheet (evologics.de/product/s2c-r-18-34-1): upper end of 5 to 285 mW,datasheet
+MODEM_DEPTH_RATING_M,2000,m,Acoustic modem,EvoLogics S2C R 18/34 product datasheet (evologics.de/product/s2c-r-18-34-1): metal housings,datasheet
+LINK_RATE_BPS,10000,bit/s,Acoustic modem,"72 % of the 13.9 kbit/s datasheet maximum, margin for coding and multipath",design choice
+OPERATING_RANGE_M,1000,m,Acoustic modem,Datasheet range of the lowest power setting,design choice
+TX_POWER_W,2.8,W,Acoustic modem,EvoLogics S2C R 18/34 product datasheet (evologics.de/product/s2c-r-18-34-1): power for the operating range,datasheet
+FRAME_PAYLOAD_BITS,512,bit,Acoustic modem,"64-byte frame payload, implemented in Cell 25",design choice
+FRAME_OVERHEAD_BITS,64,bit,Acoustic modem,"32-bit frame header + CRC-32, implemented in Cell 25",design choice
+FRAME_PREAMBLE_S,0.025,s,Acoustic modem,Not in the datasheet; sensitivity 0 to 0.1 s in Cell 19,assumption
+MODULATION,bpsk,-,Acoustic modem,Modem waveform is proprietary; uncoded BPSK is a conservative reference,assumption
+FADING,awgn,-,Acoustic modem,Fades are modelled separately by the Gilbert-Elliott burst model,assumption
+CODING_GAIN_DB,0.0,dB,Acoustic modem,No coding gain credited (conservative),assumption
+JSCC_BITS_PER_SYMBOL,4,bit/symbol,Acoustic modem,16-QAM equivalence used only to count JSCC frames,design choice
+SPREADING_K,1.5,-,Propagation and coverage,"M. Stojanovic, On the relationship between capacity and distance in an underwater acoustic channel, 2007 (practical spreading)",literature
+SHIPPING_S,0.5,-,Propagation and coverage,"M. Stojanovic, On the relationship between capacity and distance in an underwater acoustic channel, 2007 (moderate shipping)",literature
+WIND_MPS,5.0,m/s,Propagation and coverage,Moderate sea state; sensitivity 0 to 15 m/s in Cell 24,assumption
+SOUND_SPEED_MPS,1500.0,m/s,Propagation and coverage,"R. J. Urick, Principles of Underwater Sound, 3rd ed.",literature
+TX_EFFICIENCY,0.25,-,Propagation and coverage,Cancels out after calibration to the datasheet power-range pairs,assumption
+DI_DB,0.0,dB,Propagation and coverage,EvoLogics S2C R 18/34 product datasheet (evologics.de/product/s2c-r-18-34-1): horizontally omnidirectional transducer,datasheet
+FER_REQ,0.01,-,Propagation and coverage,Frame error rate that defines the edge of the datasheet range,design choice
+MAP_TARGET,0.6,mAP@0.5,Propagation and coverage,Minimum useful detection quality for coverage,design choice
+FPS_TARGETS,"[0.05, 1, 5]",fps,Propagation and coverage,Monitoring rates for coverage; 0.05 fps lets the image-based baselines appear at all,design choice
+TDMA_GUARD_COMP_S,0.05,s,Propagation and coverage,TDMA guard when AUVs pre-compensate their known propagation delay (modem ranging),assumption
+COVER_MAX_RANGE_M,6000,m,Propagation and coverage,Coverage grid extent,design choice
+COVER_MAX_DEPTH_M,1000,m,Propagation and coverage,"Coverage grid depth, within the 2000 m rating",design choice
+PI5_LATENCY_MS,94.28,ms/image,Edge platform,"Ultralytics documentation, Raspberry Pi guide: YOLOv8n on Raspberry Pi 5, NCNN, FP32, 640 px",official benchmark
+PI5_POWER_W,8.8,W,Edge platform,Typical full-load draw; replace with your own reading. Results checked up to PI5_POWER_MAX_W,assumption
+PI5_POWER_MAX_W,25.5,W,Edge platform,"Raspberry Pi 5 product brief and official 27 W USB-C power supply (5.1 V, 5 A): hard upper bound of the official supply",datasheet
+PI5_PRICE_USD,80.0,USD,Edge platform,"Raspberry Pi official list price, 8 GB (check on submission date)",datasheet
+JETSON_POWER_MODES_W,"[10.0, 25.0]",W,Edge platform,NVIDIA Jetson Orin NX series data sheet (power modes) (Orin NX 16 GB),datasheet
+JETSON_LATENCY_MS,,ms/image,Edge platform,Fill from the Ultralytics Jetson benchmark for YOLOv8n; row skipped while None,official benchmark
+JETSON_PRICE_USD,999.0,USD,Edge platform,"NVIDIA list price, Orin NX 16 GB (check on submission date)",datasheet
+CAMERA_NAME,Raspberry Pi Camera Module 3,-,Edge platform,Raspberry Pi official product page,datasheet
+CAMERA_PRICE_USD,25.0,USD,Edge platform,Raspberry Pi official list price (check on submission date),datasheet
+MISSION_HOURS,4.0,h,Mission and cost scenario,Typical survey mission length,design choice
+MISSIONS_PER_YEAR,150,-,Mission and cost scenario,Operating scenario,design choice
+YEARS,3,years,Mission and cost scenario,Total cost of ownership horizon,design choice
+PRIMARY_BATTERY_USD_PER_WH,1.0,USD/Wh,Mission and cost scenario,Single-use lithium pack cost; ratios between schemes do not depend on it,assumption
+GRID_USD_PER_KWH,0.2,USD/kWh,Mission and cost scenario,Rechargeable pack charged from shore power,assumption
+LOSS_SEEDS,"[42, 43, 44, 45, 46]",-,Evaluation protocol,Seed 42 reproduces the previous submission,design choice
+JSCC_SEEDS,"[42, 43, 44]",-,Evaluation protocol,Fewer seeds for the image-based learned baselines,design choice
+TRAIN_SEEDS,"[43, 44]",-,Evaluation protocol,Independent detector trainings besides seed 42,design choice
+SNR_LIST_LEGACY,"[10, 20, 30]",dB,Evaluation protocol,Grid of the previous submission,design choice
+RHO_LIST,"[0.0, 0.05, 0.1]",-,Evaluation protocol,Grid of the previous submission,design choice
+SNR_LIST_BER,"[0, 2, 4, 6, 8, 10, 12, 14]",dB Es/N0,Evaluation protocol,Covers the full frame error transition,design choice
+GE_MEAN_LOSS,0.1,-,Evaluation protocol,Same mean loss as the iid worst case,design choice
+GE_BURST_LENGTHS,"[2, 4, 8]",frames,Evaluation protocol,Mean burst lengths of the Gilbert-Elliott model,design choice
+JSCC_C,16,channels,Evaluation protocol,"32 x 32 x 16 latent, as in the previous submission",design choice
+JSCC_IMG_HW,256,px,Evaluation protocol,As in the previous submission,design choice
+JSCC640_C,3,channels,Evaluation protocol,"80 x 80 x 3 latent, close to the 256 px channel uses",design choice
+DEEPJSCC_C,16,channels,Evaluation protocol,Same channel uses as the JSCC autoencoder,design choice
+YOLO_EPOCHS,50,epochs,Evaluation protocol,Section IV-B,design choice
+JSCC_EPOCHS,50,epochs,Evaluation protocol,As in the previous submission,design choice
+DEEPJSCC_EPOCHS,50,epochs,Evaluation protocol,Same training length as the JSCC autoencoder,design choice
+JSCC640_EPOCHS,20,epochs,Evaluation protocol,GPU budget,design choice
+RUOD_EPOCHS,30,epochs,Evaluation protocol,"GPU budget, generalisation check only",design choice
+QUANT_LEVELS,"[256, 512, 1024, 2048]",levels,Evaluation protocol,Quantization ablation in Cell 17,design choice
+T4_LATENCY_MS,9.02,ms/image,Edge platform,Median over the validation set after 20 warm-up images (Cell 9),measured
+SIL_SNRS_DB,"[8, 12]",dB Es/N0,Evaluation protocol,Inside and above the frame error transition of Cell 14,design choice

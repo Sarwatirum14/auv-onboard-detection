@@ -1,0 +1,145 @@
+scheme,fps_target,depth_m,radius_m,area_km2,volume_km3
+deepjscc256,0.05,0,0.0,0.0,
+deepjscc256,0.05,50,0.0,0.0,
+deepjscc256,0.05,100,0.0,0.0,
+deepjscc256,0.05,200,0.0,0.0,
+deepjscc256,0.05,500,0.0,0.0,
+deepjscc256,0.05,1000,0.0,0.0,
+deepjscc256,0.05,volume 0-200 m,,,0.0
+deepjscc256,0.05,volume 0-1000 m,,,0.0
+deepjscc256,1.0,0,0.0,0.0,
+deepjscc256,1.0,50,0.0,0.0,
+deepjscc256,1.0,100,0.0,0.0,
+deepjscc256,1.0,200,0.0,0.0,
+deepjscc256,1.0,500,0.0,0.0,
+deepjscc256,1.0,1000,0.0,0.0,
+deepjscc256,1.0,volume 0-200 m,,,0.0
+deepjscc256,1.0,volume 0-1000 m,,,0.0
+deepjscc256,5.0,0,0.0,0.0,
+deepjscc256,5.0,50,0.0,0.0,
+deepjscc256,5.0,100,0.0,0.0,
+deepjscc256,5.0,200,0.0,0.0,
+deepjscc256,5.0,500,0.0,0.0,
+deepjscc256,5.0,1000,0.0,0.0,
+deepjscc256,5.0,volume 0-200 m,,,0.0
+deepjscc256,5.0,volume 0-1000 m,,,0.0
+jpeg,0.05,0,3225.0,32.674527092742345,
+jpeg,0.05,50,3225.0,32.674527092742345,
+jpeg,0.05,100,3225.0,32.674527092742345,
+jpeg,0.05,200,3225.0,32.674527092742345,
+jpeg,0.05,500,3175.0,31.669217443593606,
+jpeg,0.05,1000,3075.0,29.705722035099992,
+jpeg,0.05,volume 0-200 m,,,6.8616506894758915
+jpeg,0.05,volume 0-1000 m,,,31.913692256905133
+jpeg,1.0,0,0.0,0.0,
+jpeg,1.0,50,0.0,0.0,
+jpeg,1.0,100,0.0,0.0,
+jpeg,1.0,200,0.0,0.0,
+jpeg,1.0,500,0.0,0.0,
+jpeg,1.0,1000,0.0,0.0,
+jpeg,1.0,volume 0-200 m,,,0.0
+jpeg,1.0,volume 0-1000 m,,,0.0
+jpeg,5.0,0,0.0,0.0,
+jpeg,5.0,50,0.0,0.0,
+jpeg,5.0,100,0.0,0.0,
+jpeg,5.0,200,0.0,0.0,
+jpeg,5.0,500,0.0,0.0,
+jpeg,5.0,1000,0.0,0.0,
+jpeg,5.0,volume 0-200 m,,,0.0
+jpeg,5.0,volume 0-1000 m,,,0.0
+jscc256,0.05,0,0.0,0.0,
+jscc256,0.05,50,0.0,0.0,
+jscc256,0.05,100,0.0,0.0,
+jscc256,0.05,200,0.0,0.0,
+jscc256,0.05,500,0.0,0.0,
+jscc256,0.05,1000,0.0,0.0,
+jscc256,0.05,volume 0-200 m,,,0.0
+jscc256,0.05,volume 0-1000 m,,,0.0
+jscc256,1.0,0,0.0,0.0,
+jscc256,1.0,50,0.0,0.0,
+jscc256,1.0,100,0.0,0.0,
+jscc256,1.0,200,0.0,0.0,
+jscc256,1.0,500,0.0,0.0,
+jscc256,1.0,1000,0.0,0.0,
+jscc256,1.0,volume 0-200 m,,,0.0
+jscc256,1.0,volume 0-1000 m,,,0.0
+jscc256,5.0,0,0.0,0.0,
+jscc256,5.0,50,0.0,0.0,
+jscc256,5.0,100,0.0,0.0,
+jscc256,5.0,200,0.0,0.0,
+jscc256,5.0,500,0.0,0.0,
+jscc256,5.0,1000,0.0,0.0,
+jscc256,5.0,volume 0-200 m,,,0.0
+jscc256,5.0,volume 0-1000 m,,,0.0
+proposed_fixed_bitpacked,0.05,0,3500.0,38.48451000647496,
+proposed_fixed_bitpacked,0.05,50,3475.0,37.936694787505246,
+proposed_fixed_bitpacked,0.05,100,3475.0,37.936694787505246,
+proposed_fixed_bitpacked,0.05,200,3475.0,37.936694787505246,
+proposed_fixed_bitpacked,0.05,500,3450.0,37.392806559352515,
+proposed_fixed_bitpacked,0.05,1000,3350.0,35.25652355491145,
+proposed_fixed_bitpacked,0.05,volume 0-200 m,,,7.9721840575658005
+proposed_fixed_bitpacked,0.05,volume 0-1000 m,,,37.49105986959352
+proposed_fixed_bitpacked,1.0,0,3500.0,38.48451000647496,
+proposed_fixed_bitpacked,1.0,50,3475.0,37.936694787505246,
+proposed_fixed_bitpacked,1.0,100,3475.0,37.936694787505246,
+proposed_fixed_bitpacked,1.0,200,3475.0,37.936694787505246,
+proposed_fixed_bitpacked,1.0,500,3450.0,37.392806559352515,
+proposed_fixed_bitpacked,1.0,1000,3350.0,35.25652355491145,
+proposed_fixed_bitpacked,1.0,volume 0-200 m,,,7.9721840575658005
+proposed_fixed_bitpacked,1.0,volume 0-1000 m,,,37.49105986959352
+proposed_fixed_bitpacked,5.0,0,3500.0,38.48451000647496,
+proposed_fixed_bitpacked,5.0,50,3475.0,37.936694787505246,
+proposed_fixed_bitpacked,5.0,100,3475.0,37.936694787505246,
+proposed_fixed_bitpacked,5.0,200,3475.0,37.936694787505246,
+proposed_fixed_bitpacked,5.0,500,3450.0,37.392806559352515,
+proposed_fixed_bitpacked,5.0,1000,3350.0,35.25652355491145,
+proposed_fixed_bitpacked,5.0,volume 0-200 m,,,7.9721840575658005
+proposed_fixed_bitpacked,5.0,volume 0-1000 m,,,37.49105986959352
+proposed_fixed_bytealigned,0.05,0,3500.0,38.48451000647496,
+proposed_fixed_bytealigned,0.05,50,3475.0,37.936694787505246,
+proposed_fixed_bytealigned,0.05,100,3475.0,37.936694787505246,
+proposed_fixed_bytealigned,0.05,200,3475.0,37.936694787505246,
+proposed_fixed_bytealigned,0.05,500,3450.0,37.392806559352515,
+proposed_fixed_bytealigned,0.05,1000,3350.0,35.25652355491145,
+proposed_fixed_bytealigned,0.05,volume 0-200 m,,,7.9721840575658005
+proposed_fixed_bytealigned,0.05,volume 0-1000 m,,,37.49105986959352
+proposed_fixed_bytealigned,1.0,0,3500.0,38.48451000647496,
+proposed_fixed_bytealigned,1.0,50,3475.0,37.936694787505246,
+proposed_fixed_bytealigned,1.0,100,3475.0,37.936694787505246,
+proposed_fixed_bytealigned,1.0,200,3475.0,37.936694787505246,
+proposed_fixed_bytealigned,1.0,500,3450.0,37.392806559352515,
+proposed_fixed_bytealigned,1.0,1000,3350.0,35.25652355491145,
+proposed_fixed_bytealigned,1.0,volume 0-200 m,,,7.9721840575658005
+proposed_fixed_bytealigned,1.0,volume 0-1000 m,,,37.49105986959352
+proposed_fixed_bytealigned,5.0,0,0.0,0.0,
+proposed_fixed_bytealigned,5.0,50,0.0,0.0,
+proposed_fixed_bytealigned,5.0,100,0.0,0.0,
+proposed_fixed_bytealigned,5.0,200,0.0,0.0,
+proposed_fixed_bytealigned,5.0,500,0.0,0.0,
+proposed_fixed_bytealigned,5.0,1000,0.0,0.0,
+proposed_fixed_bytealigned,5.0,volume 0-200 m,,,0.0
+proposed_fixed_bytealigned,5.0,volume 0-1000 m,,,0.0
+jpeg_arq,0.05,0,3500.0,38.48451000647496,
+jpeg_arq,0.05,50,3475.0,37.936694787505246,
+jpeg_arq,0.05,100,3475.0,37.936694787505246,
+jpeg_arq,0.05,200,3475.0,37.936694787505246,
+jpeg_arq,0.05,500,3450.0,37.392806559352515,
+jpeg_arq,0.05,1000,3350.0,35.25652355491145,
+jpeg_arq,0.05,volume 0-200 m,,,7.9721840575658005
+jpeg_arq,0.05,volume 0-1000 m,,,37.49105986959352
+jpeg_arq,1.0,0,0.0,0.0,
+jpeg_arq,1.0,50,0.0,0.0,
+jpeg_arq,1.0,100,0.0,0.0,
+jpeg_arq,1.0,200,0.0,0.0,
+jpeg_arq,1.0,500,0.0,0.0,
+jpeg_arq,1.0,1000,0.0,0.0,
+jpeg_arq,1.0,volume 0-200 m,,,0.0
+jpeg_arq,1.0,volume 0-1000 m,,,0.0
+jpeg_arq,5.0,0,0.0,0.0,
+jpeg_arq,5.0,50,0.0,0.0,
+jpeg_arq,5.0,100,0.0,0.0,
+jpeg_arq,5.0,200,0.0,0.0,
+jpeg_arq,5.0,500,0.0,0.0,
+jpeg_arq,5.0,1000,0.0,0.0,
+jpeg_arq,5.0,volume 0-200 m,,,0.0
+jpeg_arq,5.0,volume 0-1000 m,,,0.0

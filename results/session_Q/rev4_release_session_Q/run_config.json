@@ -1,0 +1,229 @@
+{
+  "GLOBAL_SEED": 42,
+  "OUT_DIR": "/kaggle/working/rev4",
+  "SESSION": "Q",
+  "USE_PREVIOUS_DETECTOR": false,
+  "REF_MODEM": "EvoLogics S2C R 18/34 product datasheet (evologics.de/product/s2c-r-18-34-1)",
+  "REF_PI5_BENCH": "Ultralytics documentation, Raspberry Pi guide: YOLOv8n on Raspberry Pi 5, NCNN, FP32, 640 px",
+  "REF_PI5": "Raspberry Pi 5 product brief and official 27 W USB-C power supply (5.1 V, 5 A)",
+  "REF_JETSON": "NVIDIA Jetson Orin NX series data sheet (power modes)",
+  "REF_STOJ": "M. Stojanovic, On the relationship between capacity and distance in an underwater acoustic channel, 2007",
+  "REF_URICK": "R. J. Urick, Principles of Underwater Sound, 3rd ed.",
+  "REF_PAPER": "This paper",
+  "G": "Evaluation protocol",
+  "Q_POS": 1024,
+  "Q_CONF": 255,
+  "CONF_THR": 0.1,
+  "NMS_IOU_THR": 0.45,
+  "IMGSZ": 640,
+  "HEADER_BITS": 16,
+  "JPEG_Q_MAIN": 50,
+  "MODEM_NAME": "EvoLogics S2C R 18/34",
+  "MODEM_F_LOW_KHZ": 18.0,
+  "MODEM_F_HIGH_KHZ": 34.0,
+  "MODEM_MAX_RATE_BPS": 13900,
+  "MODEM_MAX_RANGE_M": 3500,
+  "MODEM_TX_POWER_TABLE": {
+    "1000": 2.8,
+    "2000": 8.0,
+    "3500": 35.0
+  },
+  "MODEM_TX_POWER_MAX_W": 65.0,
+  "MODEM_RX_POWER_W": 0.8,
+  "MODEM_LISTEN_POWER_W": 0.285,
+  "MODEM_DEPTH_RATING_M": 2000,
+  "LINK_RATE_BPS": 10000,
+  "OPERATING_RANGE_M": 1000,
+  "TX_POWER_W": 2.8,
+  "FRAME_PAYLOAD_BITS": 512,
+  "FRAME_OVERHEAD_BITS": 64,
+  "FRAME_PREAMBLE_S": 0.025,
+  "MODULATION": "bpsk",
+  "FADING": "awgn",
+  "CODING_GAIN_DB": 0.0,
+  "JSCC_BITS_PER_SYMBOL": 4,
+  "SPREADING_K": 1.5,
+  "SHIPPING_S": 0.5,
+  "WIND_MPS": 5.0,
+  "SOUND_SPEED_MPS": 1500.0,
+  "TX_EFFICIENCY": 0.25,
+  "DI_DB": 0.0,
+  "FER_REQ": 0.01,
+  "MAP_TARGET": 0.6,
+  "FPS_TARGETS": [
+    0.05,
+    1,
+    5
+  ],
+  "TDMA_GUARD_COMP_S": 0.05,
+  "COVER_MAX_RANGE_M": 6000,
+  "COVER_MAX_DEPTH_M": 1000,
+  "PI5_LATENCY_MS": 94.28,
+  "PI5_POWER_W": 8.8,
+  "PI5_POWER_MAX_W": 25.5,
+  "PI5_PRICE_USD": 80.0,
+  "JETSON_POWER_MODES_W": [
+    10.0,
+    25.0
+  ],
+  "JETSON_PRICE_USD": 999.0,
+  "CAMERA_NAME": "Raspberry Pi Camera Module 3",
+  "CAMERA_PRICE_USD": 25.0,
+  "INFER_POWER_W": 8.8,
+  "INFER_TIME_S": 0.09428,
+  "MISSION_HOURS": 4.0,
+  "MISSIONS_PER_YEAR": 150,
+  "YEARS": 3,
+  "PRIMARY_BATTERY_USD_PER_WH": 1.0,
+  "GRID_USD_PER_KWH": 0.2,
+  "LOSS_SEEDS": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "JSCC_SEEDS": [
+    42,
+    43,
+    44
+  ],
+  "TRAIN_SEEDS": [
+    43,
+    44
+  ],
+  "SNR_LIST_LEGACY": [
+    10,
+    20,
+    30
+  ],
+  "RHO_LIST": [
+    0.0,
+    0.05,
+    0.1
+  ],
+  "SNR_LIST_BER": [
+    0,
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    14
+  ],
+  "GE_MEAN_LOSS": 0.1,
+  "GE_BURST_LENGTHS": [
+    2,
+    4,
+    8
+  ],
+  "GE_LOSS_GOOD": 0.0,
+  "GE_LOSS_BAD": 1.0,
+  "JSCC_C": 16,
+  "JSCC_IMG_HW": 256,
+  "JSCC640_C": 3,
+  "DEEPJSCC_C": 16,
+  "JSCC_TRAIN_SNRS": [
+    0,
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    14,
+    20,
+    30
+  ],
+  "YOLO_EPOCHS": 50,
+  "JSCC_EPOCHS": 50,
+  "DEEPJSCC_EPOCHS": 50,
+  "JSCC640_EPOCHS": 20,
+  "RUOD_EPOCHS": 30,
+  "QUANT_LEVELS": [
+    256,
+    512,
+    1024,
+    2048
+  ],
+  "RUN_LEGACY_REPRO": false,
+  "RUN_JSCC": false,
+  "RUN_DEEPJSCC": false,
+  "RUN_BER_SWEEP": false,
+  "RUN_BURST": false,
+  "RUN_FORMAT_ABLATION": false,
+  "RUN_PER_CLASS": false,
+  "RUN_BUDGET": false,
+  "RUN_QUANT_ABLATION": true,
+  "RUN_SPLIT": false,
+  "RUN_COMPLEXITY": false,
+  "RUN_COST": false,
+  "RUN_COVERAGE": false,
+  "RUN_SIL": false,
+  "RUN_RES_CONTROL": false,
+  "RUN_JSCC640": false,
+  "RUN_TRAIN_SEEDS": false,
+  "RUN_RUOD": false,
+  "TAG_JPEG": 0,
+  "TAG_SEM": 1,
+  "TAG_ORDER": 99,
+  "TAG_JSCC": 7,
+  "INPUT_DIR": "/kaggle/input",
+  "WORK_DIR": "/kaggle/working",
+  "URPC_DIR": "/kaggle/working/dataset-taskoriented",
+  "TRAIN_IMG": "/kaggle/working/dataset-taskoriented/train/images",
+  "VAL_IMG": "/kaggle/working/dataset-taskoriented/valid/images",
+  "VAL_LBL": "/kaggle/working/dataset-taskoriented/valid/labels",
+  "URPC_YAML": "/kaggle/working/dataset-taskoriented/data.yaml",
+  "CLASS_NAMES": [
+    "echinus",
+    "holothurian",
+    "scallop",
+    "starfish"
+  ],
+  "NC": 4,
+  "PREV_DETECTOR_PATH": "",
+  "DET_WEIGHTS": "/kaggle/working/runs/train_n/weights/best.pt",
+  "TEXT_BITS_PER_DET": 360,
+  "FER_OP": 0.1,
+  "SPLIT_LAYERS": [
+    4,
+    6,
+    9
+  ],
+  "PUBLISHED_COMPLEXITY": [],
+  "F_C_KHZ": 26.0,
+  "BAND_HZ": 16000.0,
+  "SIL_SNRS_DB": [
+    8,
+    12
+  ],
+  "SIL_EDGE_MS": 94.28,
+  "FRAME_BYTES": 72,
+  "RUOD_SHARED": {
+    "echinus": [
+      "echinus",
+      "sea urchin",
+      "urchin"
+    ],
+    "holothurian": [
+      "holothurian",
+      "sea cucumber"
+    ],
+    "scallop": [
+      "scallop"
+    ],
+    "starfish": [
+      "starfish",
+      "sea star"
+    ]
+  },
+  "EDGE_DIR": "/kaggle/working/rev4/edge",
+  "environment": {
+    "python": "3.13.15",
+    "torch": "2.11.0+cu128",
+    "ultralytics": "8.4.130",
+    "gpu": "Tesla T4"
+  }
+}

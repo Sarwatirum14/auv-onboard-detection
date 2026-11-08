@@ -1,0 +1,11 @@
+{
+  "t4_latency_ms_median": 9.024895000038669,
+  "t4_latency_ms_mean": 9.155358233415058,
+  "t4_latency_ms_std": 0.5797857710485372,
+  "t4_latency_ms_p95": 10.077639200039812,
+  "mean_detections_per_image": 13.06019656019656,
+  "text_bits_per_detection": 360.0,
+  "quant_spread_map50_legacy": 0.007287955284118741,
+  "quant_spread_map50": 0.008750605583190962,
+  "ruod_zero_shot_map50_shared4": 0.6061472296714783
+}
