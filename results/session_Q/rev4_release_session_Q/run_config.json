@@ -9,7 +9,6 @@
   "REF_JETSON": "NVIDIA Jetson Orin NX series data sheet (power modes)",
   "REF_STOJ": "M. Stojanovic, On the relationship between capacity and distance in an underwater acoustic channel, 2007",
   "REF_URICK": "R. J. Urick, Principles of Underwater Sound, 3rd ed.",
-  "REF_PAPER": "This paper",
   "G": "Evaluation protocol",
   "Q_POS": 1024,
   "Q_CONF": 255,

@@ -1,10 +1,10 @@
 key,value,unit,group,source,kind
-Q_POS,1024,levels,Detector and descriptor,Section II-E; ablation in Cell 17,design choice
-Q_CONF,255,levels,Detector and descriptor,Section II-D,design choice
-CONF_THR,0.1,-,Detector and descriptor,Highest mAP in the threshold ablation (Table V),design choice
-NMS_IOU_THR,0.45,-,Detector and descriptor,Section II-C,design choice
+Q_POS,1024,levels,Detector and descriptor,Ablation in Cell 17,design choice
+Q_CONF,255,levels,Detector and descriptor,8-bit confidence,design choice
+CONF_THR,0.1,-,Detector and descriptor,Highest mAP in the threshold ablation (Cell 17B),design choice
+NMS_IOU_THR,0.45,-,Detector and descriptor,NMS IoU threshold,design choice
 IMGSZ,640,px,Detector and descriptor,YOLOv8 training and inference resolution,design choice
-HEADER_BITS,16,bit,Detector and descriptor,"Detection count per image, Algorithm 1",design choice
+HEADER_BITS,16,bit,Detector and descriptor,"Detection count per image",design choice
 JPEG_Q_MAIN,50,-,Detector and descriptor,Mid-range JPEG quality; ablation at 25 and 75,design choice
 MODEM_NAME,EvoLogics S2C R 18/34,-,Acoustic modem,EvoLogics S2C R 18/34 product datasheet (evologics.de/product/s2c-r-18-34-1),datasheet
 MODEM_F_LOW_KHZ,18.0,kHz,Acoustic modem,EvoLogics S2C R 18/34 product datasheet (evologics.de/product/s2c-r-18-34-1),datasheet
@@ -39,33 +39,33 @@ TDMA_GUARD_COMP_S,0.05,s,Propagation and coverage,TDMA guard when AUVs pre-compe
 COVER_MAX_RANGE_M,6000,m,Propagation and coverage,Coverage grid extent,design choice
 COVER_MAX_DEPTH_M,1000,m,Propagation and coverage,"Coverage grid depth, within the 2000 m rating",design choice
 PI5_LATENCY_MS,94.28,ms/image,Edge platform,"Ultralytics documentation, Raspberry Pi guide: YOLOv8n on Raspberry Pi 5, NCNN, FP32, 640 px",official benchmark
-PI5_POWER_W,8.8,W,Edge platform,Typical full-load draw; replace with your own reading. Results checked up to PI5_POWER_MAX_W,assumption
+PI5_POWER_W,8.8,W,Edge platform,Typical full-load draw; Results checked up to PI5_POWER_MAX_W,assumption
 PI5_POWER_MAX_W,25.5,W,Edge platform,"Raspberry Pi 5 product brief and official 27 W USB-C power supply (5.1 V, 5 A): hard upper bound of the official supply",datasheet
-PI5_PRICE_USD,80.0,USD,Edge platform,"Raspberry Pi official list price, 8 GB (check on submission date)",datasheet
+PI5_PRICE_USD,80.0,USD,Edge platform,"Raspberry Pi official list price, 8 GB",datasheet
 JETSON_POWER_MODES_W,"[10.0, 25.0]",W,Edge platform,NVIDIA Jetson Orin NX series data sheet (power modes) (Orin NX 16 GB),datasheet
 JETSON_LATENCY_MS,,ms/image,Edge platform,Fill from the Ultralytics Jetson benchmark for YOLOv8n; row skipped while None,official benchmark
-JETSON_PRICE_USD,999.0,USD,Edge platform,"NVIDIA list price, Orin NX 16 GB (check on submission date)",datasheet
+JETSON_PRICE_USD,999.0,USD,Edge platform,"NVIDIA list price, Orin NX 16 GB",datasheet
 CAMERA_NAME,Raspberry Pi Camera Module 3,-,Edge platform,Raspberry Pi official product page,datasheet
-CAMERA_PRICE_USD,25.0,USD,Edge platform,Raspberry Pi official list price (check on submission date),datasheet
+CAMERA_PRICE_USD,25.0,USD,Edge platform,Raspberry Pi official list price,datasheet
 MISSION_HOURS,4.0,h,Mission and cost scenario,Typical survey mission length,design choice
 MISSIONS_PER_YEAR,150,-,Mission and cost scenario,Operating scenario,design choice
 YEARS,3,years,Mission and cost scenario,Total cost of ownership horizon,design choice
 PRIMARY_BATTERY_USD_PER_WH,1.0,USD/Wh,Mission and cost scenario,Single-use lithium pack cost; ratios between schemes do not depend on it,assumption
 GRID_USD_PER_KWH,0.2,USD/kWh,Mission and cost scenario,Rechargeable pack charged from shore power,assumption
-LOSS_SEEDS,"[42, 43, 44, 45, 46]",-,Evaluation protocol,Seed 42 reproduces the previous submission,design choice
+LOSS_SEEDS,"[42, 43, 44, 45, 46]",-,Evaluation protocol,Five loss seeds,design choice
 JSCC_SEEDS,"[42, 43, 44]",-,Evaluation protocol,Fewer seeds for the image-based learned baselines,design choice
 TRAIN_SEEDS,"[43, 44]",-,Evaluation protocol,Independent detector trainings besides seed 42,design choice
-SNR_LIST_LEGACY,"[10, 20, 30]",dB,Evaluation protocol,Grid of the previous submission,design choice
-RHO_LIST,"[0.0, 0.05, 0.1]",-,Evaluation protocol,Grid of the previous submission,design choice
+SNR_LIST_LEGACY,"[10, 20, 30]",dB,Evaluation protocol,Legacy grid,design choice
+RHO_LIST,"[0.0, 0.05, 0.1]",-,Evaluation protocol,Legacy grid,design choice
 SNR_LIST_BER,"[0, 2, 4, 6, 8, 10, 12, 14]",dB Es/N0,Evaluation protocol,Covers the full frame error transition,design choice
 GE_MEAN_LOSS,0.1,-,Evaluation protocol,Same mean loss as the iid worst case,design choice
 GE_BURST_LENGTHS,"[2, 4, 8]",frames,Evaluation protocol,Mean burst lengths of the Gilbert-Elliott model,design choice
-JSCC_C,16,channels,Evaluation protocol,"32 x 32 x 16 latent, as in the previous submission",design choice
-JSCC_IMG_HW,256,px,Evaluation protocol,As in the previous submission,design choice
+JSCC_C,16,channels,Evaluation protocol,"32 x 32 x 16 latent",design choice
+JSCC_IMG_HW,256,px,Evaluation protocol,Same setting as the JSCC baseline,design choice
 JSCC640_C,3,channels,Evaluation protocol,"80 x 80 x 3 latent, close to the 256 px channel uses",design choice
 DEEPJSCC_C,16,channels,Evaluation protocol,Same channel uses as the JSCC autoencoder,design choice
-YOLO_EPOCHS,50,epochs,Evaluation protocol,Section IV-B,design choice
-JSCC_EPOCHS,50,epochs,Evaluation protocol,As in the previous submission,design choice
+YOLO_EPOCHS,50,epochs,Evaluation protocol,Detector training length,design choice
+JSCC_EPOCHS,50,epochs,Evaluation protocol,Same setting as the JSCC baseline,design choice
 DEEPJSCC_EPOCHS,50,epochs,Evaluation protocol,Same training length as the JSCC autoencoder,design choice
 JSCC640_EPOCHS,20,epochs,Evaluation protocol,GPU budget,design choice
 RUOD_EPOCHS,50,epochs,Evaluation protocol,Same as URPC2020,design choice

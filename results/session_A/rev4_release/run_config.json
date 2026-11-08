@@ -9,7 +9,7 @@
       "value": 1024,
       "unit": "levels",
       "group": "Detector and descriptor",
-      "source": "Section II-E; ablation in Cell 17",
+      "source": "Ablation in Cell 17",
       "kind": "design choice"
     },
     {
@@ -17,7 +17,7 @@
       "value": 255,
       "unit": "levels",
       "group": "Detector and descriptor",
-      "source": "Section II-D",
+      "source": "8-bit confidence",
       "kind": "design choice"
     },
     {
@@ -25,7 +25,7 @@
       "value": 0.1,
       "unit": "-",
       "group": "Detector and descriptor",
-      "source": "Highest mAP in the threshold ablation (Table V)",
+      "source": "Highest mAP in the threshold ablation (Cell 17B)",
       "kind": "design choice"
     },
     {
@@ -33,7 +33,7 @@
       "value": 0.45,
       "unit": "-",
       "group": "Detector and descriptor",
-      "source": "Section II-C",
+      "source": "NMS IoU threshold",
       "kind": "design choice"
     },
     {
@@ -49,7 +49,7 @@
       "value": 16,
       "unit": "bit",
       "group": "Detector and descriptor",
-      "source": "Detection count per image, Algorithm 1",
+      "source": "Detection count per image",
       "kind": "design choice"
     },
     {
@@ -337,7 +337,7 @@
       "value": 8.8,
       "unit": "W",
       "group": "Edge platform",
-      "source": "Typical full-load draw; replace with your own reading. Results checked up to PI5_POWER_MAX_W",
+      "source": "Typical full-load draw; Results checked up to PI5_POWER_MAX_W",
       "kind": "assumption"
     },
     {
@@ -353,7 +353,7 @@
       "value": 80.0,
       "unit": "USD",
       "group": "Edge platform",
-      "source": "Raspberry Pi official list price, 8 GB (check on submission date)",
+      "source": "Raspberry Pi official list price, 8 GB",
       "kind": "datasheet"
     },
     {
@@ -380,7 +380,7 @@
       "value": 999.0,
       "unit": "USD",
       "group": "Edge platform",
-      "source": "NVIDIA list price, Orin NX 16 GB (check on submission date)",
+      "source": "NVIDIA list price, Orin NX 16 GB",
       "kind": "datasheet"
     },
     {
@@ -396,7 +396,7 @@
       "value": 25.0,
       "unit": "USD",
       "group": "Edge platform",
-      "source": "Raspberry Pi official list price (check on submission date)",
+      "source": "Raspberry Pi official list price",
       "kind": "datasheet"
     },
     {
@@ -450,7 +450,7 @@
       ],
       "unit": "-",
       "group": "Evaluation protocol",
-      "source": "Seed 42 reproduces the previous submission",
+      "source": "Five loss seeds",
       "kind": "design choice"
     },
     {
@@ -485,7 +485,7 @@
       ],
       "unit": "dB",
       "group": "Evaluation protocol",
-      "source": "Grid of the previous submission",
+      "source": "Legacy grid",
       "kind": "design choice"
     },
     {
@@ -497,7 +497,7 @@
       ],
       "unit": "-",
       "group": "Evaluation protocol",
-      "source": "Grid of the previous submission",
+      "source": "Legacy grid",
       "kind": "design choice"
     },
     {
@@ -542,7 +542,7 @@
       "value": 16,
       "unit": "channels",
       "group": "Evaluation protocol",
-      "source": "32 x 32 x 16 latent, as in the previous submission",
+      "source": "32 x 32 x 16 latent",
       "kind": "design choice"
     },
     {
@@ -550,7 +550,7 @@
       "value": 256,
       "unit": "px",
       "group": "Evaluation protocol",
-      "source": "As in the previous submission",
+      "source": "Same setting as the JSCC baseline",
       "kind": "design choice"
     },
     {
@@ -574,7 +574,7 @@
       "value": 50,
       "unit": "epochs",
       "group": "Evaluation protocol",
-      "source": "Section IV-B",
+      "source": "Detector training length",
       "kind": "design choice"
     },
     {
@@ -582,7 +582,7 @@
       "value": 50,
       "unit": "epochs",
       "group": "Evaluation protocol",
-      "source": "As in the previous submission",
+      "source": "Same setting as the JSCC baseline",
       "kind": "design choice"
     },
     {
@@ -643,7 +643,6 @@
   "REF_JETSON": "NVIDIA Jetson Orin NX series data sheet (power modes)",
   "REF_STOJ": "M. Stojanovic, On the relationship between capacity and distance in an underwater acoustic channel, 2007",
   "REF_URICK": "R. J. Urick, Principles of Underwater Sound, 3rd ed.",
-  "REF_PAPER": "This paper",
   "G": "Evaluation protocol",
   "Q_POS": 1024,
   "Q_CONF": 255,
